@@ -3,10 +3,10 @@ const app = express()
 
 const mysql = require('mysql')
 const pool = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "root",
-    database: "juhosi"
+    host: "bk2rupwhsg3w9dliuwui-mysql.services.clever-cloud.com",
+    user: "umqoirgdui7tsi7v",
+    password: "nfr6mAfLt161tgIZZqn0",
+    database: "bk2rupwhsg3w9dliuwui"
 });
 
 // pool.connect((err) => {
