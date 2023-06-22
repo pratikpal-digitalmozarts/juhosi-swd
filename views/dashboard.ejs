@@ -1,0 +1,31 @@
+<!-- dashboard.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Welcome to the Dashboard</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Item/Customer</th>
+        <th>Customer1</th>
+        <th>Customer2</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% userData.forEach(user => { %>
+        <tr>
+          <td><%= user.item %></td>
+          <td><%= user.Cust1 %></td>
+          <td><%= user.Cust2k %></td>
+          <td><%= user.Totalk %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

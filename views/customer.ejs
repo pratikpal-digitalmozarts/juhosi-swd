@@ -1,0 +1,54 @@
+<!-- customer.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer</title>
+
+</head>
+<body>
+  <h1>Welcome <%= result[0].id %> </h1>
+  <form action="/submit" method="POST">
+    <label for="order_date">Order Date:</label>
+    <input type="date" id="order_date" name="order_date" required>
+    <br>
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company" required>
+    <br>
+    <label for="owner">Owner:</label>
+    <input type="text" id="owner" name="owner" required>
+    <br>
+    <label for="item">Item:</label>
+    <input type="text" id="item" name="item" required>
+    <br>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" required>
+    <br>
+    <label for="weight">Weight:</label>
+    <input type="number" step="0.01" id="weight" name="weight" required>
+    <br>
+    <label for="request_for_ship">Request for Shipment:</label>
+    <input type="text" id="request_for_ship" name="request_for_ship" required>
+    <br>
+    <label for="tracking_id">Tracking ID:</label>
+    <input type="text" id="tracking_id" name="tracking_id" required>
+    <br>
+    <label for="shipment_size">Shipment Size(LxBxH):</label>
+    <input type="text" id="shipment_size" name="shipment_size" required>
+    <br>
+    <label for="box_count">Box Count:</label>
+    <input type="number" id="box_count" name="box_count" required>
+    <br>
+    <label for="specification">Specification:</label>
+    <textarea id="specification" name="specification" required></textarea>
+    <br>
+    <label for="checklist">Checklist Quantity:</label>
+    <textarea id="checklist" name="checklist" required></textarea>
+    <br>
+    <input type="hidden" id="customerName" name="customer" value=" <%= result[0].id %> " required>
+    <button type="submit">Submit</button>
+  </form>
+  <% if (typeof xP !== 'undefined') { %>
+    <h1>Shipment Size is Invalid format. Correct format is LxBxH</h1>
+  <% } %>
+</body>
+</html>
